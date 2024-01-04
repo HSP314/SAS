@@ -318,5 +318,5 @@ proc report data = demog /*nowindows*/ spacing =1 headline headskip split = "|";
 	
 	footnote1 j=l "**P-values: Age = Wilcoxon rank-sum, Sex = Pearson's"
 				  "chi-square, Race = Fisher's exact test.";
-	footnote2 j=l "Created by &sysfunc(getoption(sysin)) on &sysdate9..";
+	footnote2 j=l "Created on &sysdate9..";
 run;
