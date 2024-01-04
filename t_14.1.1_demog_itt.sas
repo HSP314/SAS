@@ -66,7 +66,7 @@ proc format;
 	
 ****Create Total column****;
 data adsl;
-	set adam.adsl;
+	set adam.adsl (where=(ITTFL='Y')); /* add inital filter for subsetting ADSL (population flags, subpop, strata etc.)*/
 	output;
 	trt01pn = 2; /*Create total column where trtpn 2 = Total (Active + Placebo) and append to adsl*/
 	output;
